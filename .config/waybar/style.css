@@ -1,0 +1,174 @@
+
+/* -------------------------
+   Tokyo Night Waybar Theme
+   Half-Height Half-Boxes (fixed)
+   ------------------------- */
+* {
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+}
+
+window#waybar {
+    background: #1a1b26;
+    color: #a9b1d6;
+}
+
+/* Generic module style with half-box U-shape */
+#workspaces button,
+#clock,
+#battery,
+#network,
+#pulseaudio,
+#tray,
+#backlight,
+#cpu,
+#memory,
+#window {
+    background: #1a1b26;
+    color: #a9b1d6;
+    padding: 2px 6px;
+    margin-right: 3px; /* spacing between modules */
+
+    /* Half-box: bottom horizontal + vertical sides */
+    background-image:
+        linear-gradient(to bottom, transparent 50%, currentColor 50%), /* bottom line */
+        linear-gradient(to bottom, transparent 50%, currentColor 50%), /* left side */
+        linear-gradient(to bottom, transparent 50%, currentColor 50%); /* right side */
+    background-repeat: no-repeat;
+    background-position: bottom, left bottom, right bottom;
+    background-size: 100% 2px, 2px 50%, 2px 50%;
+}
+
+/* -------------------------
+   Module-specific colors
+   ------------------------- */
+
+/* Workspaces */
+#workspaces button { color: #a9b1d6; }
+#workspaces button.focused {
+    color: #7aa2f7;
+    background-image:
+        linear-gradient(to bottom, transparent 50%, #7aa2f7 50%),
+        linear-gradient(to bottom, transparent 50%, #7aa2f7 50%),
+        linear-gradient(to bottom, transparent 50%, #7aa2f7 50%);
+}
+#workspaces button.urgent {
+    color: #f7768e;
+    background-image:
+        linear-gradient(to bottom, transparent 50%, #f7768e 50%),
+        linear-gradient(to bottom, transparent 50%, #f7768e 50%),
+        linear-gradient(to bottom, transparent 50%, #f7768e 50%);
+}
+
+/* Clock */
+#clock {
+    color: #7aa2f7;
+    background-image:
+        linear-gradient(to bottom, transparent 50%, #7aa2f7 50%),
+        linear-gradient(to bottom, transparent 50%, #7aa2f7 50%),
+        linear-gradient(to bottom, transparent 50%, #7aa2f7 50%);
+}
+
+/* Battery */
+#battery {
+    color: #9ece6a;
+    background-image:
+        linear-gradient(to bottom, transparent 50%, #9ece6a 50%),
+        linear-gradient(to bottom, transparent 50%, #9ece6a 50%),
+        linear-gradient(to bottom, transparent 50%, #9ece6a 50%);
+}
+#battery.warning {
+    color: #e0af68;
+    background-image:
+        linear-gradient(to bottom, transparent 50%, #e0af68 50%),
+        linear-gradient(to bottom, transparent 50%, #e0af68 50%),
+        linear-gradient(to bottom, transparent 50%, #e0af68 50%);
+}
+#battery.critical {
+    color: #f7768e;
+    background-image:
+        linear-gradient(to bottom, transparent 50%, #f7768e 50%),
+        linear-gradient(to bottom, transparent 50%, #f7768e 50%),
+        linear-gradient(to bottom, transparent 50%, #f7768e 50%);
+}
+
+/* Network */
+#network {
+    color: #7dcfff;
+    background-image:
+        linear-gradient(to bottom, transparent 50%, #7dcfff 50%),
+        linear-gradient(to bottom, transparent 50%, #7dcfff 50%),
+        linear-gradient(to bottom, transparent 50%, #7dcfff 50%);
+}
+#network.disconnected {
+    color: #f7768e;
+    background-image:
+        linear-gradient(to bottom, transparent 50%, #f7768e 50%),
+        linear-gradient(to bottom, transparent 50%, #f7768e 50%),
+        linear-gradient(to bottom, transparent 50%, #f7768e 50%);
+}
+
+/* Audio */
+#pulseaudio {
+    color: #bb9af7;
+    background-image:
+        linear-gradient(to bottom, transparent 50%, #bb9af7 50%),
+        linear-gradient(to bottom, transparent 50%, #bb9af7 50%),
+        linear-gradient(to bottom, transparent 50%, #bb9af7 50%);
+}
+#pulseaudio.muted {
+    color: #545c7e;
+    background-image:
+        linear-gradient(to bottom, transparent 50%, #545c7e 50%),
+        linear-gradient(to bottom, transparent 50%, #545c7e 50%),
+        linear-gradient(to bottom, transparent 50%, #545c7e 50%);
+}
+
+/* Backlight */
+#backlight {
+    color: #e0af68;
+    background-image:
+        linear-gradient(to bottom, transparent 50%, #e0af68 50%),
+        linear-gradient(to bottom, transparent 50%, #e0af68 50%),
+        linear-gradient(to bottom, transparent 50%, #e0af68 50%);
+}
+
+/* CPU */
+#cpu {
+    color: #f7768e;
+    background-image:
+        linear-gradient(to bottom, transparent 50%, #f7768e 50%),
+        linear-gradient(to bottom, transparent 50%, #f7768e 50%),
+        linear-gradient(to bottom, transparent 50%, #f7768e 50%);
+}
+
+/* Memory */
+#memory {
+    color: #bb9af7;
+    background-image:
+        linear-gradient(to bottom, transparent 50%, #bb9af7 50%),
+        linear-gradient(to bottom, transparent 50%, #bb9af7 50%),
+        linear-gradient(to bottom, transparent 50%, #bb9af7 50%);
+}
+
+/* Window */
+#window {
+    color: #a9b1d6;
+    background-image:
+        linear-gradient(to bottom, transparent 50%, #a9b1d6 50%),
+        linear-gradient(to bottom, transparent 50%, #a9b1d6 50%),
+        linear-gradient(to bottom, transparent 50%, #a9b1d6 50%);
+}
+
+/* Tray */
+#tray {
+    color: #a9b1d6;
+    background-image:
+        linear-gradient(to bottom, transparent 50%, #a9b1d6 50%),
+        linear-gradient(to bottom, transparent 50%, #a9b1d6 50%),
+        linear-gradient(to bottom, transparent 50%, #a9b1d6 50%);
+}

@@ -1,0 +1,27 @@
+{
+	"layer": "top",
+	"modules-center": ["hyprland/workspaces", "clock"],
+	"modules-left": ["hyprland/window"],
+	"modules-right": ["battery", "network"],
+	"sway/window": {
+		"max-length": 50
+	},
+	"battery": {
+		"format": "{icon} {capacity}%",
+		"format-icons": ["Battery:"]
+	},
+	"clock": {
+		"format-alt": "{:%a, %d. %b  %H:%M}"
+	},
+	"network": {
+        	"tooltip": true,
+        	"rotate": 0,
+        	"format-ethernet": "Ethernet: ",
+        	"tooltip-format": "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>",
+        	"format-linked": "Wifi: {ifname} (No IP)",
+        	"format-disconnected": "Disconnected ",
+        	"tooltip-format-disconnected": "Disconnected",
+        	"format-alt": "<span foreground='#99ffdd'> Download {bandwidthDownBytes}</span> <span foreground='#ffcc66'> Upload {bandwidthUpBytes}</span>",
+        	"interval": 2
+    	}
+}
